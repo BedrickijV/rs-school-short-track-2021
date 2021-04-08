@@ -12,8 +12,8 @@
 function deleteDigit(n) {
   const numbers = n.toString().split('').map((number) => +number);
   const minNumber = Math.min(...numbers);
-  const result = numbers.splice(numbers.indexOf(minNumber, 1));
-  return +result.join('');
+  numbers.splice(numbers.indexOf(minNumber), 1);
+  return +numbers.join('');
 }
 
 module.exports = deleteDigit;
